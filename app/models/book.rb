@@ -8,6 +8,7 @@ class Book < ApplicationRecord
 
   scope :latest, -> {order(created_at: :desc)}
   scope :rate_count, -> {order(rate: :desc)}
+  scope :favorites_count, -> {order(favorites: :desc)}
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
