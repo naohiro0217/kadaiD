@@ -11,7 +11,7 @@
   		<table class='table'>
   		  <tr>
           <td><%= link_to(@book.user) do %>
-            <%= image_tag @book.user.get_profile_image, size:"100x100" %><br>
+            <%= image_tag @book.user.get_profile_image, size:"90x90" %><br>
             <%= @book.user.name %>
             <% end %>
           </td>
@@ -30,13 +30,13 @@
           <% end %>
         </tr>
       </table>
-      
+
       <div class="book-comments-index">
         <%= render "book_comments/index", book: @book %>
       </div>
-      
+
       <%= render "book_comments/form", book: @book, book_comment: @book_comment %>
-      
+
     </div>
   </div>
 </div>
